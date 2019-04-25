@@ -10,7 +10,7 @@ install-box-virtualbox: dragonflybsd-virtualbox.box
 dragonflybsd-virtualbox.box: dragonflybsd.json http/p *.sh Vagrantfile
 	PACKER_LOG=1 packer build -force -only virtualbox-iso dragonflybsd.json
 
-clean: clean-boxes clean-vagrant clean-artifacts clean-isos
+clean: clean-boxes clean-vagrant clean-artifacts
 
 clean-boxes:
 	-rm *.box
